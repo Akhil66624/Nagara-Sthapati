@@ -1,7 +1,7 @@
 # 🚀 Nagara Sthapati: A City Policy Simulation Platform
 
 ## 📌 Overview
-This project builds a **City Digital Twin on Databricks** that enables urban planners to simulate and optimize policy decisions such as pricing for transport, water, and fuel.
+This project builds a ** Nagara Stapati: City Digital Twin on Databricks** that enables urban planners to simulate and optimize policy decisions such as pricing for transport, water, and fuel.
 
 The system models how citizens respond to policy changes and provides **real-time insights into demand, revenue, and infrastructure stress**.
 
