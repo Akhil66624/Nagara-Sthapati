@@ -1,10 +1,11 @@
 # Databricks notebook source
+# DBTITLE 1,Cell 1
 # 03_simulation
 
 import mlflow.pyfunc
 import pandas as pd
 
-model = mlflow.pyfunc.load_model("models:/workspace.default.city_demand_forecast/1")
+model = mlflow.pyfunc.load_model("runs:/04f218bce72a4fe18c5594c8281148b1/model")
 
 def simulate(policy):
 
