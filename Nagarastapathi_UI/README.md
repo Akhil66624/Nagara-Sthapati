@@ -33,6 +33,57 @@ We developed an **AI-powered simulation platform** that:
 
 ---
 
+## Architecture Diagram
+                ┌────────────────────────────┐
+                │   Synthetic Data Generator │
+                │ (01_data_generation.ipynb) │
+                └────────────┬───────────────┘
+                             │
+                             ▼
+                ┌────────────────────────────┐
+                │   Delta Table (city_data)  │
+                │   (Databricks Lakehouse)   │
+                └────────────┬───────────────┘
+                             │
+                             ▼
+                ┌────────────────────────────┐
+                │   Feature Engineering      │
+                │ (Spark + Pandas)           │
+                └────────────┬───────────────┘
+                             │
+                             ▼
+                ┌────────────────────────────┐
+                │   ML Model Training        │
+                │ (02_model_training.ipynb)  │
+                │ Random Forest + MLflow    │
+                └────────────┬───────────────┘
+                             │
+                             ▼
+                ┌────────────────────────────┐
+                │   MLflow Model Registry    │
+                │ city_demand_forecast       │
+                └────────────┬───────────────┘
+                             │
+                             ▼
+                ┌────────────────────────────┐
+                │   Simulation Engine        │
+                │ (03_simulation.ipynb)      │
+                │ Policy → Demand Prediction │
+                └────────────┬───────────────┘
+                             │
+                             ▼
+                ┌────────────────────────────┐
+                │   Streamlit App UI         │
+                │ (app.py)                  │
+                │ Interactive Policy Control│
+                └────────────┬───────────────┘
+                             │
+                             ▼
+                ┌────────────────────────────┐
+                │   Planner / Decision Maker │
+                │ Real-time Insights         │
+                └────────────────────────────┘
+
 ## ⚙️ Components
 
 ### 1. Data Generation (`01_data_generation.ipynb`)
